@@ -1,0 +1,292 @@
+{
+  "crop_health_rf": {
+    "model_type": "RandomForestClassifier",
+    "accuracy": 0.7667,
+    "precision": 0.7663,
+    "recall": 0.7667,
+    "f1_score": 0.7649,
+    "confusion_matrix": [
+      [
+        36,
+        13,
+        0
+      ],
+      [
+        11,
+        110,
+        12
+      ],
+      [
+        0,
+        20,
+        38
+      ]
+    ],
+    "feature_importances": {
+      "soil_ph": 0.15204146291602622,
+      "soil_moisture": 0.1419620898498712,
+      "temperature": 0.13210971099385455,
+      "humidity": 0.049162091883919574,
+      "rainfall": 0.04582418538131796,
+      "nitrogen": 0.140332884213033,
+      "phosphorus": 0.13764286271248932,
+      "potassium": 0.11613220002424357,
+      "electrical_conductivity": 0.08479251202524464
+    },
+    "features": [
+      "soil_ph",
+      "soil_moisture",
+      "temperature",
+      "humidity",
+      "rainfall",
+      "nitrogen",
+      "phosphorus",
+      "potassium",
+      "electrical_conductivity"
+    ],
+    "target_classes": [
+      "Optimal / Healthy",
+      "Moderate Stress / Deficiency",
+      "Severe Stress / Critical"
+    ]
+  },
+  "crop_yield_xgb": {
+    "model_type": "XGBRegressor",
+    "mae": 1.2694,
+    "mse": 4.1093,
+    "rmse": 2.0272,
+    "r2_score": 0.9488,
+    "feature_importances": {
+      "area_hectares": 0.01169424969702959,
+      "rainfall_mm": 0.08591848611831665,
+      "avg_temp_c": 0.016814464703202248,
+      "fertilizer_kg_per_ha": 0.02356332167983055,
+      "soil_quality_index": 0.08331496268510818,
+      "crop_type_code": 0.7541888952255249,
+      "season_code": 0.024505723267793655
+    },
+    "features": [
+      "area_hectares",
+      "rainfall_mm",
+      "avg_temp_c",
+      "fertilizer_kg_per_ha",
+      "soil_quality_index",
+      "crop_type_code",
+      "season_code"
+    ],
+    "sample_test_predictions": [
+      {
+        "actual": 3.61,
+        "predicted": 4.1
+      },
+      {
+        "actual": 1.12,
+        "predicted": 1.76
+      },
+      {
+        "actual": 12.58,
+        "predicted": 13.73
+      },
+      {
+        "actual": 2.32,
+        "predicted": 1.92
+      },
+      {
+        "actual": 3.44,
+        "predicted": 5.14
+      },
+      {
+        "actual": 5.14,
+        "predicted": 5.86
+      },
+      {
+        "actual": 10.58,
+        "predicted": 13.22
+      },
+      {
+        "actual": 0.91,
+        "predicted": 0.55
+      },
+      {
+        "actual": 23.27,
+        "predicted": 25.72
+      },
+      {
+        "actual": 13.58,
+        "predicted": 13.21
+      }
+    ]
+  },
+  "crop_disease_cnn": {
+    "model_type": "MobileNetV2 (Transfer Learning)",
+    "accuracy": 0.3167,
+    "precision": 0.2692,
+    "recall": 0.3167,
+    "f1_score": 0.2672,
+    "num_classes": 10,
+    "classes": [
+      "Apple___Apple_scab",
+      "Apple___Black_rot",
+      "Apple___healthy",
+      "Corn_(maize)___Common_rust_",
+      "Corn_(maize)___healthy",
+      "Potato___Early_blight",
+      "Potato___Late_blight",
+      "Potato___healthy",
+      "Tomato___Bacterial_spot",
+      "Tomato___healthy"
+    ],
+    "confusion_matrix": [
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        3,
+        0
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        6
+      ],
+      [
+        1,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        5,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0,
+        0,
+        0,
+        3,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        5,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        2,
+        0,
+        0,
+        0,
+        0,
+        4
+      ]
+    ],
+    "training_history": {
+      "accuracy": [
+        0.1536,
+        0.2893,
+        0.375,
+        0.3536,
+        0.4143
+      ],
+      "val_accuracy": [
+        0.2,
+        0.2167,
+        0.2333,
+        0.2333,
+        0.2333
+      ],
+      "loss": [
+        2.2079,
+        1.7533,
+        1.5449,
+        1.5151,
+        1.4334
+      ],
+      "val_loss": [
+        1.8537,
+        1.7271,
+        1.6896,
+        1.6723,
+        1.646
+      ]
+    }
+  }
+}
